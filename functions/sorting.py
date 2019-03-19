@@ -55,7 +55,7 @@ def quick_sort(items):
     if len(items) <= 1:
         return items
 
-    pivot = items[0]
+    pivot = items[-1]
 
     for i in items:
         if i < pivot:
@@ -68,4 +68,5 @@ def quick_sort(items):
         low = quick_sort(low)
         high = quick_sort(high)
 
-        return low + pivot_list + high
+        result = low + pivot_list + high
+        return result
