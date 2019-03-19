@@ -9,8 +9,10 @@ def sum_array(array):
 def fibonacci(n):
 
     '''Return nth term in fibonacci sequence'''
-    if n <= 1:
-        return n
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
     else:
         return fibonacci(n-1) + fibonacci(n-2)
 
@@ -18,8 +20,8 @@ def fibonacci(n):
 def factorial(n):
 
     '''Return n!'''
-    if n == 1:
-        return n
+    if n == 1 or n == 0:
+        return 1
     else:
         return n * factorial(n-1)
 
