@@ -55,7 +55,7 @@ def quick_sort(items):
     if len(items) <= 1:
         return items
 
-    pivot = items[-1]
+    pivot = items[0]
 
     for i in items:
         if i < pivot:
