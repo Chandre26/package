@@ -4,7 +4,7 @@ def sum_array(array):
     if len(array) == 0:
         return 0
     else:
-        return array[0] + sum_array[array[1:0]]
+        return array[0] + sum_array(array[1:0])
 
 def fibonacci(n):
 

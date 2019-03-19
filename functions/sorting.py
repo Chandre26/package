@@ -68,4 +68,4 @@ def quick_sort(items):
         low = quick_sort(low)
         high = quick_sort(high)
 
-        return less + pivot_list + more
+        return low + pivot_list + high
