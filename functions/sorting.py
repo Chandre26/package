@@ -48,25 +48,21 @@ def quick_sort(items):
 
     '''Return array of items, sorted in ascending order'''
 
-    low = []
-    high = []
+    lower = []
     pivot_list = []
+    higher = []
 
     if len(items) <= 1:
         return items
     else:
-        pivot = items[-1]
-
+        pivot = items[0]
         for i in items:
             if i < pivot:
-                low.append(i)
+                lower.append(i)
             elif i > pivot:
-                high.append(i)
+                higher.append(i)
             else:
                 pivot_list.append(i)
-
-            low = quick_sort(low)
-            high = quick_sort(high)
-
-            result = low + pivot_list + high
-            return result
+        lower = quick_sort(lower)
+        higher = quick_sort(higher)
+        return lower + pivot_list + higher
